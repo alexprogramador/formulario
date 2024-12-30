@@ -1,0 +1,202 @@
+/* Estilização geral do corpo da página */
+body {
+    font-family: Arial, sans-serif; /* Define a fonte utilizada na página */
+    background: linear-gradient(to right, #4facfe, #00f2fe); /* Gradiente de fundo que vai do azul para o ciano */
+    display: flex; /* Utiliza flexbox para layout */
+    flex-direction: column; /* Organiza os itens em coluna */
+    align-items: center; /* Alinha os itens ao centro horizontalmente */
+    justify-content: center; /* Alinha os itens ao centro verticalmente */
+    height: 100vh; /* Define a altura como 100% da altura da visualização */
+    margin: 0; /* Remove a margem padrão */
+    animation: fadeIn 1.5s ease-in-out; /* Aplica a animação fadeIn com duração de 1.5 segundos */
+    padding: 0; /* Remove o padding padrão */
+}
+
+/* Definição da animação fadeIn */
+@keyframes fadeIn {
+    from { opacity: 0; } /* Começa com opacidade 0 (invisível) */
+    to { opacity: 1; } /* Termina com opacidade 1 (totalmente visível) */
+}
+
+/* Estilização dos cabeçalhos h3 */
+h3 {
+    position: fixed; /* Fixa o cabeçalho no topo da página */
+    top: 0; /* Alinha ao topo */
+    left: 0; /* Alinha à esquerda */
+    width: 100%; /* Define a largura como 100% da tela */
+    background-color: white; /* Define a cor de fundo como branca */
+    border-top: 2px solid blue; /* Borda superior azul */
+    border-bottom: 2px solid blue; /* Borda inferior azul */
+    z-index: 1000; /* Garante que o cabeçalho fique acima de outros elementos */
+    margin: 0; /* Remove a margem padrão */
+    padding: 0; /* Remove o padding padrão */
+    text-align: center; /* Centraliza o texto */
+}
+
+/* Estilização do logo dentro do cabeçalho */
+h3 .logo-pequena {
+    width: 250px; /* Define a largura do logo */
+    height: auto; /* Mantém a proporção da altura */
+    margin: 0; /* Remove a margem padrão */
+    padding: 0; /* Remove o padding padrão */
+    /*animation: bounce 10s;*/ /* Animação comentada, não ativa */
+}
+
+/* Definição da animação bounce */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0); /* Define a posição original */
+    }
+    40% {
+        transform: translateY(-30px); /* Move para cima */
+    }
+    60% {
+        transform: translateY(-15px); /* Move um pouco para cima */
+    }
+}
+
+/* Estilização do contêiner do formulário */
+.form-container {
+    background-color: #fff; /* Define a cor de fundo como branca */
+    padding: 20px; /* Adiciona padding ao redor do conteúdo */
+    border-radius: 10px; /* Arredonda os cantos */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adiciona sombra ao redor */
+    animation: slideUp 1.2s ease-out; /* Aplica a animação slideUp com duração de 1.2 segundos */
+}
+
+/* Definição da animação slideUp */
+@keyframes slideUp {
+    from { transform: translateY(50px); opacity: 0; } /* Começa deslocado para baixo e invisível */
+    to { transform: translateY(0); opacity: 1; } /* Termina na posição original e visível */
+}
+
+/* Estilização do formulário */
+form {
+    display: flex; /* Utiliza flexbox para layout */
+    flex-direction: column; /* Organiza os itens em coluna */
+}
+
+/* Estilização dos rótulos dentro do formulário */
+label {
+    margin-bottom: 5px; /* Adiciona espaço abaixo do rótulo */
+    font-weight: bold; /* Define o texto como negrito */
+}
+
+/* Estilização dos campos de entrada e área de texto */
+input, textarea {
+    margin-bottom: 15px; /* Adiciona espaço abaixo dos campos */
+    padding: 10px; /* Adiciona padding ao redor do texto */
+    border: 1px solid #ccc; /* Define a borda como cinza claro */
+    border-radius: 5px; /* Arredonda os cantos */
+    font-size: 16px; /* Define o tamanho da fonte */
+}
+
+/* Estilização dos botões */
+button {
+    padding: 10px; /* Adiciona padding ao redor do texto */
+    background-color: #007bff; /* Define a cor de fundo como azul */
+    color: #fff; /* Define a cor do texto como branca */
+    border: none; /* Remove a borda padrão */
+    border-radius: 5px; /* Arredonda os cantos */
+    cursor: pointer; /* Altera o cursor para indicar um botão clicável */
+    transition: background-color 0.3s ease; /* Adiciona uma transição suave para a cor de fundo */
+}
+
+/* Estilização do botão ao passar o mouse */
+button:hover {
+    background-color: #0056b3; /* Altera a cor de fundo para um tom mais escuro de azul */
+}
+
+/* Estilização das mensagens de sucesso */
+.success {
+    color: green; /* Define a cor do texto como verde */
+    margin-top: 20px; /* Adiciona espaço acima da mensagem */
+}
+
+/* Estilização das mensagens de erro */
+.error {
+    color: red; /* Define a cor do texto como vermelho */
+    margin-top: 20px; /* Adiciona espaço acima da mensagem */
+}
+
+/* Ajuste da tabela */
+.table-container {
+    width: 60%; /* Define a largura da tabela como 60% do contêiner */
+    margin: 20px auto; /* Adiciona margem vertical e centraliza horizontalmente */
+    overflow-x: auto; /* Permite rolagem horizontal se necessário */
+}
+
+table {
+    width: 100%; /* Define a largura da tabela como 100% do contêiner */
+    border-collapse: collapse; /* Remove espaços entre as bordas das células */
+    background-color: #fff; /* Define a cor de fundo como branca */
+}
+
+/* Estilização das células da tabela */
+th, td {
+    border: 1px solid #ddd; /* Define a borda como cinza claro */
+    padding: 8px; /* Adiciona padding ao redor do texto */
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+/* Estilização dos cabeçalhos da tabela */
+th {
+    background-color: #007bff; /* Define a cor de fundo como azul */
+    color: #fff; /* Define a cor do texto como branca */
+}
+
+/* Estilização das linhas pares da tabela */
+tr:nth-child(even) {
+    background-color: #f2f2f2; /* Define uma cor de fundo cinza claro para linhas pares */
+}
+
+/* Estilização das linhas ao passar o mouse */
+tr:hover {
+    background-color: #ddd; /* Altera a cor de fundo para cinza claro ao passar o mouse */
+}
+
+/* Estilização do elemento principal */
+main {
+    display: flex; /* Utiliza flexbox para layout */
+    justify-content: space-between; /* Distribui os itens com espaço entre eles */
+    padding: 20px; /* Adiciona padding ao redor do conteúdo */
+}
+
+/* Estilização do contêiner do formulário dentro do main */
+.form-container {
+    flex: 1; /* Permite que o contêiner ocupe o espaço disponível */
+}
+
+/* Estilização do aside com imagem lateral */
+aside.imagem-lateral {
+    flex: 0 0 350px; /* Define uma largura fixa para o aside */
+    margin-left: 20px; /* Adiciona espaço à esquerda */
+    text-align: center; /* Centraliza o texto */
+}
+
+/* Estilização da imagem dentro do aside */
+aside.imagem-lateral img {
+    width: 100%; /* Aumenta a imagem para ocupar 100% da largura do aside */
+    height: auto; /* Mantém a proporção da altura */
+    border-radius: 8px; /* Arredonda os cantos */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona sombra ao redor da imagem */
+    animation: fadeInOut 20s ease-in-out infinite; /* Aplica a animação fadeInOut que repete indefinidamente */
+}
+
+/* Definição da animação fadeInOut */
+@keyframes fadeInOut {
+    0%, 100% { opacity: 0; } /* Começa e termina invisível */
+    50% { opacity: 1; } /* No meio do ciclo, fica totalmente visível */
+}
+
+/* Estilização da mensagem dentro do aside */
+aside .mensagem {
+    margin-top: 10px; /* Adiciona espaço acima da mensagem */
+    font-size: 14px; /* Define o tamanho da fonte */
+    color: blue; /* Define a cor da fonte como azul */
+}
+
+/* Estilização do rodapé */
+footer {
+    color: blue; /* Define a cor do texto como azul */
+}
