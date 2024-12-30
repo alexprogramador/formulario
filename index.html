@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- Define o idioma do documento como inglês -->
+<head>
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Define a viewport para tornar o site responsivo -->
+    <title>Landing Page FAESA</title> <!-- Define o título da página que aparece na aba do navegador -->
+    <link rel="stylesheet" href="style.css"> <!-- Vincula o arquivo CSS para estilizar a página -->
+</head>
+<body>
+    <header>
+        <nav>
+            <!-- Logotipo da Faesa -->
+            <h3><img src="imagens/download2(1).png" alt="Logotipo da Faesa" class="logo-pequena"></h3> <!-- Inclui o logotipo da Faesa com uma classe para estilização -->
+        </nav>
+    </header>
+    <main>
+        <!-- Formulário de Contato -->
+        <div class="form-container"> <!-- Contêiner para o formulário -->
+            <form action="bd.php" method="POST" id="contact-form"> <!-- Formulário com método POST e ação direcionada para bd.php -->
+                <label for="nome">Nome:</label> <!-- Rótulo para o campo de nome -->
+                <input type="text" id="nome" name="nome" required> <!-- Campo de entrada para nome, obrigatório -->
+
+                <label for="email">E-mail:</label> <!-- Rótulo para o campo de e-mail -->
+                <input type="email" id="email" name="email" required> <!-- Campo de entrada para e-mail, obrigatório -->
+
+                <label for="telefone">Telefone:</label> <!-- Rótulo para o campo de telefone -->
+                <input type="text" id="telefone" name="telefone" required pattern="\d{10,11}" placeholder="Digite seu telefone sem formatação"> <!-- Campo de entrada para telefone, obrigatório com padrão para 10 ou 11 dígitos e um placeholder -->
+
+                <label for="mensagem">Mensagem:</label> <!-- Rótulo para o campo de mensagem -->
+                <textarea id="mensagem" name="mensagem" required minlength="10" maxlength="50" placeholder="Digite no mínimo 10 e no máximo 50 caracteres"></textarea> <!-- Área de texto para mensagem, obrigatória com comprimento mínimo e máximo especificados e um placeholder -->
+
+                <button type="submit" name="submit">Enviar</button> <!-- Botão de envio do formulário -->
+            </form>
+        </div>
+        <aside class="imagem-lateral">
+            <img src="imagens/imagem1.webp" alt="Imagem Lateral"> <!-- Imagem lateral com uma descrição alternativa -->
+            <p class="mensagem">A oportunidade de voçê aparecer para o mercado de trabalho</p> <!-- Mensagem ao lado da imagem -->
+        </aside>
+    </main>
+    <footer>
+        <p>Criado por Alexsandro Barbosa da Silva</p> <!-- Texto de rodapé com o nome do criador -->
+    </footer>
+</body>
+</html>
